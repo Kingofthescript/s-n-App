@@ -32,24 +32,13 @@
             height: 100%;
         }
 
-        /* Body styles */
+        /* Set body background color to orange to ensure full coverage */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8; /* Light gray background color */
+            background-color: #FF8C00; /* Darker orange color for full coverage */
             color: #333; /* Dark gray text color */
             line-height: 1.6;
-            position: relative; /* Ensure positioning context for absolute elements */
-        }
-
-        /* Darker orange line at the top of the page */
-        .top-line {
-            background-color: #FF8C00; /* Darker orange color */
-            height: 10px; /* Height of the line */
-            width: 100%; /* Full width */
-            position: fixed; /* Fixed positioning to keep it in place */
-            top: 0; /* Aligns to the top */
-            left: 0; /* Aligns to the left */
-            z-index: 1; /* Ensures it’s on top */
+            position: relative;
         }
 
         /* Header styles */
@@ -58,15 +47,17 @@
             color: white; /* White text color */
             padding: 20px 0;
             text-align: center;
-            position: relative; /* Relative positioning for z-index */
-            z-index: 2; /* Ensures header is above the top-line */
-            margin-top: 10px; /* Space below the top line */
+            width: 100%; /* Ensure it covers the full width */
+            position: fixed; /* Fixed positioning to keep it in place */
+            top: 0; /* Aligns to the top */
+            left: 0; /* Aligns to the left */
+            z-index: 2; /* Ensures header is on top of other elements */
         }
 
         /* Main content styles */
         main {
-            margin-top: 20px; /* Space below the header */
-            padding: 0 20px; /* Optional: Add some padding */
+            margin-top: 80px; /* Space below the header to avoid overlap */
+            padding: 20px; /* Optional: Add some padding */
         }
 
         /* Style for headings */
@@ -116,9 +107,6 @@
     </style>
 </head>
 <body>
-    <!-- Darker orange line at the top of the page -->
-    <div class="top-line"></div>
-    
     <!-- Header section -->
     <header>
         <h1>Welcome to Zainsburys Rewards</h1>
