@@ -32,13 +32,23 @@
             height: 100%;
         }
 
-        /* Set body background color to orange to ensure full coverage */
+        /* Body styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #FF8C00; /* Darker orange color for full coverage */
+            background-color: #ffffff; /* White background color */
             color: #333; /* Dark gray text color */
             line-height: 1.6;
-            position: relative;
+        }
+
+        /* Darker orange bar at the top of the page */
+        .top-line {
+            background-color: #FF8C00; /* Darker orange color */
+            height: 10px; /* Height of the line */
+            width: 100%; /* Full width */
+            position: fixed; /* Fixed positioning to keep it in place */
+            top: 0; /* Aligns to the top */
+            left: 0; /* Aligns to the left */
+            z-index: 1; /* Ensures it’s on top */
         }
 
         /* Header styles */
@@ -49,7 +59,7 @@
             text-align: center;
             width: 100%; /* Ensure it covers the full width */
             position: fixed; /* Fixed positioning to keep it in place */
-            top: 0; /* Aligns to the top */
+            top: 10px; /* Position below the top line */
             left: 0; /* Aligns to the left */
             z-index: 2; /* Ensures header is on top of other elements */
         }
@@ -107,6 +117,9 @@
     </style>
 </head>
 <body>
+    <!-- Darker orange line at the top of the page -->
+    <div class="top-line"></div>
+    
     <!-- Header section -->
     <header>
         <h1>Welcome to Zainsburys Rewards</h1>
@@ -125,4 +138,5 @@
     </footer>
 </body>
 </html>
+
 
