@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zainsburys Rewards</title>
+    <title>Sainsburys Rewards</title>
     
     <!-- Link to web app manifest -->
     <link rel="manifest" href="manifest.json">
@@ -14,7 +14,7 @@
     <!-- Meta tags for mobile web apps -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Zainsburys Rewards">
+    <meta name="apple-mobile-web-app-title" content="Sainsburys Rewards">
     
     <style>
         /* Basic reset to ensure consistent styling across browsers */
@@ -40,7 +40,7 @@
             line-height: 1.6;
         }
 
-        /* Darker orange bar at the top of the page */
+        /* Darker orange line at the top of the page */
         .top-line {
             background-color: #FF8C00; /* Darker orange color */
             height: 10px; /* Height of the line */
@@ -93,11 +93,13 @@
 
         /* Footer styles */
         footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            background-color: #FF8C00; /* Dark orange background for footer */
+            background-color: #FF8C00; /* Dark orange background */
             color: white; /* White text color */
+            padding: 20px 0; /* Padding for footer content */
+            text-align: center;
+            width: 100%; /* Ensure it covers the full width */
+            position: absolute; /* Position at the bottom */
+            bottom: 0; /* Aligns to the bottom */
         }
 
         /* Responsive design */
@@ -107,6 +109,10 @@
             }
 
             header {
+                padding: 10px 0;
+            }
+
+            footer {
                 padding: 10px 0;
             }
 
@@ -122,7 +128,7 @@
     
     <!-- Header section -->
     <header>
-        <h1>Welcome to Zainsburys Rewards</h1>
+        <h1>Welcome to Sainsburys Rewards</h1>
     </header>
     
     <!-- Main content section -->
@@ -131,9 +137,9 @@
         <!-- Add more content or sections as needed -->
     </main>
     
-    <!-- Footer section (optional) -->
+    <!-- Footer section -->
     <footer>
-        <p>&copy; 2024 Zainsburys Rewards. All rights reserved.</p>
+        <p>&copy; 2024 Sainsburys Rewards. All rights reserved.</p>
         <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
     </footer>
 </body>
