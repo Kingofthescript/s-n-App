@@ -62,17 +62,6 @@
             line-height: 1.6;
         }
 
-        /* Darker orange line at the top of the page */
-        .top-line {
-            background-color: #FF8C00; /* Darker orange color */
-            height: 10px; /* Height of the line */
-            width: 100vw; /* Full viewport width */
-            position: fixed; /* Fixed positioning to keep it in place */
-            top: 0; /* Aligns to the top */
-            left: 0; /* Aligns to the left */
-            z-index: 1; /* Ensures it’s on top */
-        }
-
         /* Header styles */
         header {
             background-color: #FF8C00; /* Fully dark orange background */
@@ -81,9 +70,9 @@
             text-align: center;
             width: 100vw; /* Ensure full width of viewport */
             position: fixed; /* Fixed positioning to keep it in place */
-            top: 10px; /* Position below the top line */
+            top: 0; /* Aligns to the top */
             left: 0; /* Aligns to the left */
-            z-index: 2; /* Ensures header is on top of other elements */
+            z-index: 1; /* Ensures header is on top of other elements */
             display: flex;
             align-items: center; /* Center items vertically */
             justify-content: center; /* Center items horizontally */
@@ -113,7 +102,7 @@
 
         /* Main content styles */
         main {
-            margin-top: 80px; /* Space below the header to avoid overlap */
+            margin-top: 60px; /* Space below the header to avoid overlap */
             padding: 20px; /* Optional: Add some padding */
         }
 
@@ -138,17 +127,6 @@
             text-decoration: underline; /* Underline links on hover */
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #FF8C00; /* Dark orange background */
-            color: white; /* White text color */
-            padding: 20px 0; /* Padding for footer content */
-            text-align: center;
-            width: 100vw; /* Ensure it covers the full width */
-            position: absolute; /* Position at the bottom */
-            bottom: 0; /* Aligns to the bottom */
-        }
-
         /* Responsive design */
         @media (max-width: 600px) {
             body {
@@ -159,10 +137,6 @@
                 padding: 10px 0;
             }
 
-            footer {
-                padding: 10px 0;
-            }
-
             h1 {
                 font-size: 1.5em;
             }
@@ -170,9 +144,6 @@
     </style>
 </head>
 <body>
-    <!-- Darker orange line at the top of the page -->
-    <div class="top-line"></div>
-    
     <!-- Header section -->
     <header>
         <div class="close-button" onclick="handleClose()">X</div>
@@ -184,12 +155,6 @@
         <p>Track your rewards points and get exclusive offers!</p>
         <!-- Add more content or sections as needed -->
     </main>
-    
-    <!-- Footer section -->
-    <footer>
-        <p>&copy; 2024 Sainsburys Rewards. All rights reserved.</p>
-        <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
-    </footer>
 
     <!-- Inline JavaScript -->
     <script>
