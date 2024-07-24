@@ -104,27 +104,43 @@
         main {
             margin-top: 60px; /* Space below the header to avoid overlap */
             padding: 20px; /* Optional: Add some padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Style for headings */
-        h1 {
-            font-size: 2em;
+        /* Style for image container */
+        .voucher-image {
+            width: 90%;
+            max-width: 500px;
             margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Paragraph styles */
-        p {
-            margin-bottom: 15px;
+        .voucher-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
-        /* Link styles */
-        a {
-            color: #007BFF; /* Blue color for links */
+        /* Style for the button */
+        .voucher-button {
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            text-align: center;
             text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline; /* Underline links on hover */
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 10px auto;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
         }
 
         /* Responsive design */
@@ -152,8 +168,10 @@
     
     <!-- Main content section -->
     <main>
-      
-        <!-- Add more content or sections as needed -->
+        <div class="voucher-image">
+            <img src="/mnt/data/IMG_0290.png" alt="Voucher Image">
+        </div>
+        <button class="voucher-button">Spend voucher online</button>
     </main>
 
     <!-- Inline JavaScript -->
