@@ -44,7 +44,7 @@
         .top-line {
             background-color: #FF8C00; /* Darker orange color */
             height: 10px; /* Height of the line */
-            width: 100%; /* Full width */
+            width: 100vw; /* Full viewport width */
             position: fixed; /* Fixed positioning to keep it in place */
             top: 0; /* Aligns to the top */
             left: 0; /* Aligns to the left */
@@ -57,7 +57,7 @@
             color: white; /* White text color */
             padding: 10px 20px; /* Adjusted padding */
             text-align: center;
-            width: 100%; /* Ensure it covers the full width */
+            width: 100vw; /* Ensure full width of viewport */
             position: fixed; /* Fixed positioning to keep it in place */
             top: 10px; /* Position below the top line */
             left: 0; /* Aligns to the left */
@@ -65,7 +65,8 @@
             display: flex;
             align-items: center; /* Center items vertically */
             justify-content: center; /* Center items horizontally */
-            position: relative; /* Position relative for absolute positioning of close button */
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to header */
+            overflow: hidden; /* Ensure content does not overflow */
         }
 
         /* Style for close button "X" */
@@ -121,7 +122,7 @@
             color: white; /* White text color */
             padding: 20px 0; /* Padding for footer content */
             text-align: center;
-            width: 100%; /* Ensure it covers the full width */
+            width: 100vw; /* Ensure it covers the full width */
             position: absolute; /* Position at the bottom */
             bottom: 0; /* Aligns to the bottom */
         }
@@ -169,3 +170,4 @@
     </footer>
 </body>
 </html>
+
