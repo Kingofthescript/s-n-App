@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -153,7 +153,7 @@
     
     <!-- Header section -->
     <header>
-        <div class="close-button">X</div>
+        <div class="close-button" onclick="handleClose()">X</div>
         <h1>My Vouchers</h1>
     </header>
     
@@ -168,6 +168,16 @@
         <p>&copy; 2024 Sainsburys Rewards. All rights reserved.</p>
         <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
     </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        // Function to handle the close button click
+        function handleClose() {
+            // Example action: just log to console
+            console.log("Close button clicked. You can handle navigation or other actions here.");
+            // For actual navigation, you can use:
+            // window.location.href = 'your-url-here';
+        }
+    </script>
 </body>
 </html>
-
