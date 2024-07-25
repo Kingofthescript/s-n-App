@@ -230,7 +230,11 @@
     <script>
         // Function to handle the close button click
         function handleClose() {
-            console.log("Close button clicked.");
+            if (window.matchMedia('(display-mode: standalone)').matches) {
+                window.location.href = 'https://www.sainsburys.co.uk/';
+            } else {
+                window.open('https://www.sainsburys.co.uk/', '_blank');
+            }
         }
 
         // Function to enable editing
