@@ -121,6 +121,7 @@
             padding: 20px; /* Padding inside the container */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow around the container */
             border-radius: 8px; /* Rounded corners */
+            position: relative;
         }
 
         /* Voucher barcode image */
@@ -166,6 +167,26 @@
             font-size: 1em;
         }
 
+        /* Hidden file input */
+        #file-input {
+            display: none;
+        }
+
+        /* Hidden input for coupon value */
+        .input-value {
+            display: none;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+            border: none;
+        }
+
+        /* Editable state */
+        .editable {
+            display: block;
+        }
+
         /* Responsive design */
         @media (max-width: 600px) {
             .voucher-container {
@@ -187,29 +208,60 @@
     <!-- Header section -->
     <header>
         <div class="close-button" onclick="handleClose()">X</div>
-        <h1>My Vouchers</h1>
+        <h1 onclick="enableEditing()">My Vouchers</h1>
     </header>
     
     <!-- Main content section -->
     <main>
         <div class="voucher-container">
-            <img src="9.98bar.png" alt="Voucher Barcode" class="voucher-image">
-            <div class="voucher-amount">£9.98</div>
-            <div class="expiry-date">Expires Monday 1st September 2026</div>
+            <img id="voucher-image" src="voucher-placeholder.png" alt="Voucher Barcode" class="voucher-image">
+            <div class="voucher-amount" id="voucher-amount-display">£9.50</div>
+            <input type="text" id="voucher-amount-input" class="input-value">
+            <div class="expiry-date">Expires Monday 1st September 2024</div>
             <div class="instructions">Scan this voucher at the in-store checkout or spend online.</div>
             <a href="#" class="button">Spend voucher online</a>
         </div>
     </main>
 
+    <!-- Hidden file input -->
+    <input type="file" id="file-input" accept="image/*" onchange="handleImageUpload(event)">
+    
     <!-- Inline JavaScript -->
     <script>
         // Function to handle the close button click
         function handleClose() {
-            // Example action: just log to console
-            console.log("Close button clicked. You can handle navigation or other actions here.");
-            // For actual navigation, you can use:
-            // window.location.href = 'your-url-here';
+            console.log("Close button clicked.");
         }
+
+        // Function to enable editing
+        function enableEditing() {
+            document.getElementById('file-input').click();
+            document.getElementById('voucher-amount-display').classList.add('editable');
+            document.getElementById('voucher-amount-input').classList.add('editable');
+            document.getElementById('voucher-amount-input').value = document.getElementById('voucher-amount-display').innerText;
+            document.getElementById('voucher-amount-display').style.display = 'none';
+        }
+
+        // Function to handle the image upload
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('voucher-image').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Update the voucher amount on input blur
+        document.getElementById('voucher-amount-input').addEventListener('blur', function() {
+            const newValue = document.getElementById('voucher-amount-input').value;
+            document.getElementById('voucher-amount-display').innerText = newValue;
+            document.getElementById('voucher-amount-display').style.display = 'block';
+            document.getElementById('voucher-amount-display').classList.remove('editable');
+            document.getElementById('voucher-amount-input').classList.remove('editable');
+        });
     </script>
 </body>
 </html>
